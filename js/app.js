@@ -51,17 +51,16 @@ document.getElementById('verify-pin').addEventListener('click', function () {
     const currentPin = displayPinField.value;
     const typedNumberField = document.getElementById('typed-number');
     const typedNumber = typedNumberField.value;
+
     const pinSuccessMessage = document.getElementById('pin-success');
     const piFailureMessage = document.getElementById('pin-failure');
     if (typedNumber === currentPin) {
-
         pinSuccessMessage.style.display = 'block';
-        piFailureMessage.style.display = 'block';
+        piFailureMessage.style.display = 'none';
     }
 
     else {
-
         piFailureMessage.style.display = 'block';
-        pinSuccessMessage.style.display = 'block';
+        pinSuccessMessage.style.display = 'none';
     }
 })
